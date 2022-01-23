@@ -44,7 +44,7 @@ contract StakeNFT {
 
     //function to call another function
     function callStakeToken(address token, uint _tokenID) public {
-        require(token == 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005, "incorrect NFT to stake"); // hardcode the NFT smart contract to allow only specific NFT into staking
+        require(token == 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005, "incorrect NFT to stake"); // hardcode the NFT smart contract to allow only specific NFT into staking, assume 0xd2...d005 as NFT contract address
         stakeToken(token, _tokenID);
     }
 
