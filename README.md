@@ -10,9 +10,9 @@ In order for NFT staking to be realized, we would require a smart contract that 
 NFT is staked to a smart contract that is known as StakeNFT(in stake6.sol) that can hold,track and transfer ERC-721 tokens and will only accept NFT that has a specific smart contract address (hardcoded). StakeNFT will allow users to stake, check their stake status, claim the reward tokens when staking period is over and also cancel their stake. When NFT staked has completed their staking duration, claiming the reward tokens will instruct a separate smart contract known as TokenPool(in pool.sol) to distribute a set amount of reward token to the staker. Users can then take back their NFT, claim their rewards and start another session of staking if they wish to.
 
 ## How to use
-1) Deploy the ERC-20 and ERC-721 token 1st
-2) Hardcode the ERC-721 address to the StakeNFT contract
-3) Hardcode the StakeNFT contract address and the ERC-20 token address to the TokenPool contract
+1) Deploy the ERC-20 and ERC-721 token
+2) Hardcode the ERC-721 address to the StakeNFT contract and deploy StakeNFT contract
+3) Hardcode the StakeNFT contract address and the ERC-20 token address to the TokenPool contract and deploy TokenPool contract
 4) Fiddle around
 
 ###### Important: approve(to, tokenId) has to be called by user with "to" being the StakeNFT address before calling the callStakeToken as the StakeNFT contract will need approval to call the transferFrom() function
